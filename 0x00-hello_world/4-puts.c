@@ -1,8 +1,6 @@
-#!/bin/bash
 #include <stdio.h>
 
 int main(){
-	char state[]="\"Programming is like building a multilingual puzzle";
-	puts(state);
+	puts("\"Programming is like building a multilingual puzzle");
 	return(0);
 }
