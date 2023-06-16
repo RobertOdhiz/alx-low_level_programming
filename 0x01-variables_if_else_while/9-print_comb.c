@@ -12,7 +12,7 @@ int main(void)
 	{
 		putchar('0' + n);
 		if (n == 9)
-                	break;
+			break;
 		putchar(',');
 		putchar(' ');
 		n++;
