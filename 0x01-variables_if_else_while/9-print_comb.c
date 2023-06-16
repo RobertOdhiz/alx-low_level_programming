@@ -7,7 +7,6 @@
 int main(void)
 {
 	int n = 0;
-	int j = 0;
 	
 	for (n = 0; n < 10; n++)
 	{
