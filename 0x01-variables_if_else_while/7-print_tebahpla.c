@@ -1,0 +1,15 @@
+#include <stdio.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	char lowercase = 'z';
+
+	while (lowercase >= 'a')
+		lowercase--;
+	putchar('\n');
+	return (0);
+}
