@@ -7,6 +7,7 @@
  * return: On success 1.
  * O error, -1 is returned, and set appropriately.
  */
-list _putchar(char c)
+int _putchar(char c)
 {
 	return (write(1, &c, 1));
+}
