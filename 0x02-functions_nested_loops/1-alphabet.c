@@ -10,7 +10,7 @@ void print_alphabet(void)
 		alpha++;
 	}
 	putchar('\n');
-};
+}
 /**
  * main - check the code
  *
@@ -20,4 +20,4 @@ int main(void)
 {
 	print_alphabet();
 	return (0);
-};
+}
