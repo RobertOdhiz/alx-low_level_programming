@@ -9,9 +9,9 @@ void print_times_table(int n)
 {
 	int x, y, z, u, d;
 
-	for (x = 0; x < n; x++)
+	for (x = 0; x <= n; x++)
 	{
-		for (y = 0; y < n; y++)
+		for (y = 0; y <= n; y++)
 		{
 			z = x * y;
 			if (z > n)
