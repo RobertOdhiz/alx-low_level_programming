@@ -1,8 +1,11 @@
 #include "main.h"
 
 /**
- * main - main funtion
- * Return: 0
+ * main - prints numbers fom 1 to 100
+ * for multiples of 3 prints fizz
+ * for multiples of 5 prints buzz
+ * for multiples of both 3 and 5 prints fizzbuzz
+ * Return: always 0 (success)
  */
 
 int main(void)
