@@ -22,7 +22,7 @@ void more_numbers(void)
 				_putchar(x + '0');
 			}
 		}
-		_putchar('\n');
+		putchar('\n');
 	}
-	_putchar('\n');
+	putchar('\n');
 }
