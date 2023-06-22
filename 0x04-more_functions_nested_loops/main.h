@@ -13,3 +13,5 @@ void print_most_numbers(void);
 void more_numbers(void);
 
 #include <stdio.h>
+
+void print_line(int n);
