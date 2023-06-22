@@ -16,6 +16,6 @@ void more_numbers(void)
 				_putchar(49);
 			_putchar((j % 10) + '0');
 		}
-		printf('\n');
+		_putchar('\n');
 	}
 }
