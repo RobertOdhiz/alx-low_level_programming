@@ -8,16 +8,23 @@
 
 int is_prime_number(int n)
 {
-	int i;
+	return (_prime(n, 1));
+}
 
-	if (n == 2)
-		return (1);
-	else if (n < 2)
+/**
+ * _prime - Finds prime mumber
+ * @n: Number checked
+ * @i: iteration times
+ * Return: 1 for prime 0 otherwise
+ */
+
+int _prime(int n, int i)
+{
+	if (n <= 1)
 		return (0);
-	for (i = 2; i <= n / 2; i++)
-	{
-		if (n % i == 0)
-			return (0);
-	}
-	return (1);
+	else if (n % i == 0 && i > 1)
+		return (0);
+	else if ((n / i) < i)
+		return (1);
+	return (_prime(n, i + 1));
 }
