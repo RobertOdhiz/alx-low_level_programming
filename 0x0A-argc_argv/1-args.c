@@ -3,7 +3,7 @@
 /**
  * main - main function
  * @argc: count of arguments
- * @argv - array of poignters to strings which are those arguments
+ * @argv: array of poignters to strings which are those arguments
  * Return: always 0 for success
  */
 
