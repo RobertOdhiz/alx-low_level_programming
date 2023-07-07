@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+git commit -m "Add file to 0x0A-argc_argv directory"
+git push
