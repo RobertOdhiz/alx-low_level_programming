@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+git commit -m "Add file to Static files directory"
+git push
