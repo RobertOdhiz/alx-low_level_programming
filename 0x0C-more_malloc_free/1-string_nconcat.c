@@ -2,14 +2,14 @@
 #include <stdlib.h>
 
 /**
- * string_concat - Concatenates two strings
+ * string_nconcat - Concatenates two strings
  * @s1: First string
  * @s2: Second String
  * @n: First bytes of s2 to be concatenated
  * Return: concatenated string
  */
 
-char *string_concat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i = 0, j = 0, k = 0, l = 0;
 	char *str;
@@ -39,7 +39,7 @@ char *string_concat(char *s1, char *s2, unsigned int n)
 	{
 		if (k <= i)
 			str[k] = s1[k];
-		if (k > i)
+		if (k >= i)
 		{
 			str[k] = s2[j];
 			j++;
