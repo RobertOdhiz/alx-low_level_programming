@@ -7,7 +7,7 @@
  * Return: always 0 for success
  */
 
-int main(int argc, char *argc[])
+int main(int argc, char *argv[])
 {
 	int (*ptr)(int, int);
 
