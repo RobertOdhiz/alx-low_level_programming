@@ -5,7 +5,8 @@
  * @array: Array checked
  * @size: Size of the array
  * @cmp: pointer to a function
- *
+ * Return: Index of integer, -1 if not found
+ * or number is less than 0
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
