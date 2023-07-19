@@ -2,8 +2,6 @@
 
 /**
  * get_op_func - pointer to a function
- * @a: first input
- * @b: second input
  * @s: sign operator
  * Return: integer
  */
