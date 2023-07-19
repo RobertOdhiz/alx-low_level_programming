@@ -4,7 +4,7 @@
  * op_add - Adds two integers
  * @a: first integer
  * @b: Seond integer
- * Ruturns: sum of integers
+ * Ruturn: sum of integers
  */
 
 int op_add(int a, int b)
@@ -26,7 +26,7 @@ int op_sub(int a, int b)
 
 /**
  * op_mul - Multiplies two integers
- * 2a: First integer
+ * @a: First integer
  * @b: second integer
  * Return: Product
  */
