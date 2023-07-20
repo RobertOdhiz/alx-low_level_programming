@@ -12,10 +12,8 @@ void print_all(const char * const format, ...)
 	char choice, *str;
 	va_list list;
 	int i = 0;
-	double num;
 
 	va_start(list, format);
-
 	while (format && format[i])
 	{
 		choice = format[i];
@@ -29,8 +27,7 @@ void print_all(const char * const format, ...)
 			printf("%d", va_arg(list, int));
 			break;
 		case 'f':
-			num = va_arg(list, double);
-			printf("%f", num);
+			printf("%f", va_arg(list, double));
 			break;
 		case 's':
 			str = va_arg(list, char *);
