@@ -22,7 +22,7 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	while (check <= num)
+	while (check <= n)
 		check <<= 1;
 
 	check >>= 1;
