@@ -13,7 +13,10 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned int count = 0;
 	unsigned long int modulus;
 
-	while (n > 0)
+	if (index >= sizeof(unsigned long int) * 8)
+		return (-1);
+
+	while (n > 0 || count <= index)
 	{
 		modulus = n % 2;
 		n /= 2;
