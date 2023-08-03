@@ -1,6 +1,37 @@
 #include "main.h"
 
 /**
+ * power - gives the power of a function
+ * @num: Number checked
+ * @exponent: Exponent used
+ *
+ * Return: nothing
+ */
+
+int power(int num, int exponent)
+{
+	int res = 1;
+
+	if (exponent == 0)
+		return (1);
+	else if (exponent < 0)
+	{
+		num = 1 / num;
+		exponent = -exponent;
+	}
+
+	while (exponent > 0)
+	{
+		if (exponent % 2 == 1)
+			res *= num;
+		num *= num;
+		exponent /= 2;
+	}
+
+	return (res);
+}
+
+/**
  * binary_to_uint - converts bbinary to unsigned int
  * @b: string with binary in it
  *
@@ -25,7 +56,7 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 
 		if (b[i] == '1')
-			val += pow(2, k);
+			val += power(2, k);
 	}
 
 	return (val);
