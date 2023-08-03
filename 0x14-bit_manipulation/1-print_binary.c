@@ -9,27 +9,21 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int check = 1;
+	int i, count = 0;
+	unsigned long int check;
 
-	if (n == 0)
+	for (i = 63; i >= 0; i--)
 	{
+		check = n >> 1;
+
+		if (check & 1)
+		{
+			_putchar('1');
+			count++;
+		}
+		else if (count)
+			_putchar('0');
+	}
+	if (!count)
 		_putchar('0');
-		return;
-	}
-	else if (n == 1)
-	{
-		_putchar('1');
-		return;
-	}
-
-	while (check <= n)
-		check <<= 1;
-
-	check >>= 1;
-
-	while (check > 0)
-	{
-		_putchar((n & check) ? '1' : '0');
-		check >>= 1;
-	}
 }
