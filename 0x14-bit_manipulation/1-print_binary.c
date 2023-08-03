@@ -9,20 +9,27 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int check = 1UL << (sizeof(long int) * 8 - 1);
-	int counted = 0;
+	long int check = 1;
+
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
+	else if (n == 1)
+	{
+		_putchar('1');
+		return;
+	}
+
+	while (check <= num)
+		check <<= 1;
+
+	check >>= 1;
 
 	while (check > 0)
 	{
-		if (n & check)
-			_putchar('1');
-		else
-			_putchar('0');
-
-		counted = 1;
+		_putchar((n & check) ? '1' : '0');
 		check >>= 1;
 	}
-
-	if (!counted)
-		_putchar('0');
 }
