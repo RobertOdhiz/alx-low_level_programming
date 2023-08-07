@@ -16,14 +16,14 @@ char *creating_buffer(char *file)
 
 	buff = malloc(sizeof(char) * 1024);
 
-	if (buffer == NULL)
+	if (buff == NULL)
 	{
 		dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", file);
 		exit(99);
 	}
 
-	return (buffer);
+	return (buff);
 }
 /**
  * closing_file - Closes file descriptors.
@@ -80,13 +80,22 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 
+		writing = write(into, buffer, reading);
+		if (into == -1 || writing == -1)
+		{
+			dprintf(STDERR_FILENO,
+					"Error: Can't write to %s\n", argv[2]);
+			free(buffer);
+			exit(99);
+		}
+
 		reading = read(form, buffer, 1024);
 		into = open(argv[2], O_WRONLY | O_APPEND);
 	} while (reading > 0);
 
 	free(buffer);
-	close_file(form);
-	close_file(into);
+	closing_file(form);
+	closing_file(into);
 
 	return (0);
 }
