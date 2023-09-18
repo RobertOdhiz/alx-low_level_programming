@@ -1,0 +1,2 @@
+### Concepts
+- Linux Dynamic Libraries
