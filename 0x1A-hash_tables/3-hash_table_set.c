@@ -10,40 +10,40 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-        unsigned long int index;
-        hash_node_t *new_node, *temp;
-        int check;
+	unsigned long int index;
+	hash_node_t *new_node, *temp;
+	int check;
 
-        if (!ht || !key || key[0] == '\0' || value == NULL)
-                return (0);
+	if (!ht || !key || key[0] == '\0' || value == NULL)
+		return (0);
 
-        index = key_index((const unsigned char *)key, ht->size);
+	index = key_index((const unsigned char *)key, ht->size);
 
-        temp = ht->array[index];
+	temp = ht->array[index];
 
-        while (temp)
-        {
-                if (strcmp(temp->key, key) == 0)
-                {
-                        free(temp->value);
-                        temp->value = strdup(value);
-                        if (temp->value == NULL)
-                                return (0);
-                        return (1);
-                }
-                temp = temp->next;
-        }
+	while (temp)
+	{
+		if (strcmp(temp->key, key) == 0)
+		{
+			free(temp->value);
+			temp->value = strdup(value);
+			if (temp->value == NULL)
+				return (0);
+			return (1);
+		}
+		temp = temp->next;
+	}
 
 	new_node = malloc(sizeof(hash_node_t));
-        check = create_node(key, value, new_node);
+	check = create_node(key, value, new_node);
 
-        if (check == 0)
-                return (0);
+	if (check == 0)
+		return (0);
 
-        new_node->next = ht->array[index];
-        ht->array[index] = new_node;
+	new_node->next = ht->array[index];
+	ht->array[index] = new_node;
 
-        return (1);
+	return (1);
 }
 
 /**
@@ -56,23 +56,23 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 int create_node(const char *key, const char *value, hash_node_t *temp)
 {
-        if (!temp)
-                return (0);
+	if (!temp)
+		return (0);
 
-        temp->key = strdup(key);
-        if (!temp->key)
-        {
-                free(temp);
-                return (0);
-        }
+	temp->key = strdup(key);
+	if (!temp->key)
+	{
+		free(temp);
+		return (0);
+	}
 
-        temp->value = strdup(value);
-        if (!temp->value)
-        {
-                free(temp->key);
-                free(temp);
-                return (0);
-        }
+	temp->value = strdup(value);
+	if (!temp->value)
+	{
+		free(temp->key);
+		free(temp);
+		return (0);
+	}
 
-        return (1);
+	return (1);
 }
