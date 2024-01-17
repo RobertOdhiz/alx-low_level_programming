@@ -51,4 +51,4 @@ typedef struct skiplist_s
 
 skiplist_t *linear_skip(skiplist_t *list, int value);
 
-#endif
+#endif /* SEARCH_ALGOS_H */
